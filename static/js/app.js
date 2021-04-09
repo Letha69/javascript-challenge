@@ -19,4 +19,46 @@ tableData.forEach(ufoSighting =>{
     });
 });
 
+var button = d3.select("#button");
 
+button.on("click",function(){
+
+    d3.event.preventDefault();
+    d3.select(".button").html("");
+    
+    var inputElement = d3.select("#datetime");
+    filteredtable(inputElement,"datetime");
+    
+    // get the vlue property of the input element
+    var inputValue = inputElement.property("value");
+    var selectedData = tableData.filter(tableData =>tableData.datetime === inputValue);
+    
+    // loop through
+    selectedData.forEach((dateData) =>{
+        var tr = tbody.append("tr");
+        Object.entries(dateData).forEach(([key,value]) =>{
+            var td = tbody.append("td");
+            td.text(value);
+        })
+    })
+})
+
+function filteredtable(inputElement,inputType){
+    // Get the value property of the input element   
+    var inputValue = inputElement.property("value");
+
+
+    var selectedData = tableData.filter(tableData => tableData[inputType] === inputValue);
+
+    // loop through
+    selectedData.forEach((dateData)=>{
+        var tr = tbody.append("tr");
+        Object.entries(dateData).forEach(([key, value]) =>{
+            var td = tbody.append("td");
+            td.text(value);           
+
+        })
+        
+    })
+
+}
