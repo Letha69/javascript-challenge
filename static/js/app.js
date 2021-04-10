@@ -38,20 +38,20 @@ button.on("click",function(){
 
     if(!inputElement.value){
         filteredtable(inputElement,"datetime")
-    }
+    };
 
     if(!cityElement.value){
         filteredtable(cityElement,"city")
-    }
+    };
     if(!stateElement.value){
         filteredtable(stateElement,"state")
-    }
+    };
     if(!countryElement.value){
         filteredtable(countryElement,"country")
-    }
+    };
     if(!shapeElement.value){
-        filteredtable(countryElement,"shape")
-    }
+        filteredtable(shapeElement,"shape")
+    };
     
     // get the vlue property of the input element
     //var inputValue = inputElement.property("value");
@@ -65,7 +65,7 @@ button.on("click",function(){
            //td.text(value);
         //})
     //})
-})
+//})
 
 function filteredtable(inputElement,inputType){
     // Get the value property of the input element   
@@ -86,3 +86,4 @@ function filteredtable(inputElement,inputType){
     })
 
 }
+})
