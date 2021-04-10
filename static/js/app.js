@@ -40,14 +40,18 @@ button.on("click",function(){
         filteredtable(inputElement,"datetime")
     }
 
-    if(!inputElement.value){
+    if(!cityElement.value){
         filteredtable(cityElement,"city")
     }
-    if(!inputElement.value){
+    if(!stateElement.value){
         filteredtable(stateElement,"state")
     }
-
-
+    if(!countryElement.value){
+        filteredtable(countryElement,"country")
+    }
+    if(!shapeElement.value){
+        filteredtable(countryElement,"shape")
+    }
     
     // get the vlue property of the input element
     //var inputValue = inputElement.property("value");
