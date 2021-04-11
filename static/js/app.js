@@ -36,23 +36,6 @@ button.on("click",function(){
     //filteredtable(inputElement,"datetime");
     //filteredtable(cityElement, "city");
 
-    if(!inputElement.value){
-        filteredtable(inputElement,"datetime")
-    };
-
-    if(!cityElement.value){
-        filteredtable(cityElement,"city")
-    };
-    if(!stateElement.value){
-        filteredtable(stateElement,"state")
-    };
-    if(!countryElement.value){
-        filteredtable(countryElement,"country")
-    };
-    if(!shapeElement.value){
-        filteredtable(shapeElement,"shape")
-    };
-    
     // get the vlue property of the input element
     //var inputValue = inputElement.property("value");
     //var selectedData = tableData.filter(tableData =>tableData.datetime === inputValue);
@@ -66,6 +49,25 @@ button.on("click",function(){
         //})
     //})
 //})
+
+    if(!inputElement.value){
+        filteredtable(inputElement,"datetime")
+    }
+
+    if(!cityElement.value){
+        filteredtable(cityElement,"city")
+    }
+    if(!stateElement.value){
+        filteredtable(stateElement,"state")
+    }
+    if(!countryElement.value){
+        filteredtable(countryElement,"country")
+    }
+    if(!shapeElement.value){
+        filteredtable(shapeElement,"shape")
+    }
+    
+
 
 function filteredtable(inputElement,inputType){
     // Get the value property of the input element   
